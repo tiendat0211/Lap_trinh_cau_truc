@@ -1,26 +1,45 @@
 Report here:
-Link to group drive: driveSP_18
+Link to group drive: "https://drive.google.com/drive/folders/19oEP0pbzGXf24pjQc2bFnIPRDcicPGN8"
 
 Week 1-3 report --> SP_18_W3
 
 Week 4 (cards) --> SP_18_W4
 
 Install instruction:
--Step 1: Run the following command to create application.
+-Step 1: clone this repository "https://github.com/tiendat0211/Lap_trinh_cau_truc"
+-Step 2: Download file .env "https://drive.google.com/file/d/1CxvFLuhkcg4k9XsAEGodi6GsCexR10Ur/view?usp=sharing"
+-Step 3: Dowload file demo_ltct.sql "https://drive.google.com/file/d/1D6coWeWPTsJrNbjFGyYSOQ3KmkvqfStI/view?usp=sharing"
+-Step 4: Create database with xampp
+      + Create database in xampp with name demo_ltct
+      + Import file demo_ltct.sql
+-Step 5: Install composer and npm
+      + composer install
+      + npm install 
+      + npm run dev
+-Step 6: Start local server
+      + php artisan serve
 
-  + Create a new app:
-	composer create-project laravel/laravel example-app
-  + Install breeze (A laravel authentication template)
-	composer require laravel/breeze --dev 
-	php artisan breeze:install 
-  + Install and compile npm
-	npm install 
-	npm run dev
--Step 2: Create database with xampp.
+API List:
 
-  +Create database in xampp with name demo_ltct
-  +In file .env, rename database DB_DATABASE=demo_ltct
-  +Migrate database
-	php artisan migrate 
-  +Start local server
-	php artisan serve 
+API for impbill:
+      + Get: /impbill
+      + Post: /save_impbill
+      + Get import bills by date: /api/get_impbills/{date}
+      + Get all import bills: /api/get_impbills
+API for impbill:
+      + Get: /expbill
+      + Post: /save_expbill
+      + Display import bills by date: /api/get_expbills/{date}
+      + Display all import bills: /api/get_expbills
+API for product:
+      + Get all product: /api/get_products
+      + Get info of product by id: /api/get_products/{id}
+      + Get sum of quantity of product in warehouse by id(Thống kê sản phẩm tồn kho theo id): /api/get_sumofquantity/{id}
+API for sales data:
+      + Get all order: /api/get_order
+      + Get info of order by order_id: /api/get_order_details/{id}
+      + Get quantity of product by order_id: /api/get_quantityorder/{id}
+      + Get sum of order: /api/get_sumoforder
+      + Get revenue of product: /api/get_revenue/{id}
+      + Get revenue by date: /api/get_revenuebydate/{date}
+

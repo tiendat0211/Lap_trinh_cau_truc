@@ -12,7 +12,13 @@ use App\Models\Impbill;
 
 class KhohangController extends Controller
 {
-    public function get_product($product_id){
+    public function get_product(){
+        $products= Product::all();
+        return $products;
+        //return DB::select("SELECT * from products")
+    }
+
+    public function get_productbyid($product_id){
         $products= Product::find($product_id);
         return $products;
         //return DB::select("SELECT * from products")
@@ -20,8 +26,11 @@ class KhohangController extends Controller
 
     public function get_sumofquantity($product_id){
         $products= Product::find($product_id);
-        $quantity= $products->quantity;
-        return $quantity;
+        $quantity=0;
+        foreach( $products->quantity as $value){
+            $quantity+=$value->quantity;
+        }
+        return "Số lượng sản phẩm ".$product_id. " còn trong kho: ".$quantity;
     }
 
     public function get_quantityorder($product_id){
@@ -53,7 +62,17 @@ class KhohangController extends Controller
         foreach($products->order_details as $value){
             $revenue+= $value->payment;
         }
-        return "Số tiền thu được từ sản phẩm ".$product_id." là:".$revenue;
+        return "Số tiền thu được từ sản phẩm ".$product_id." là:".$revenue." VND";
+    }
+
+    public function get_revenuebydate($date){
+        $orders=Order::whereDate('created_at',$date)->join('order_details','order_details.order_id','=','orders.id')->get();
+        $revenue=0;
+        foreach($orders as $value){
+            $revenue+= $value->payment;
+        }
+        return "Số tiền thu được theo ngày ".$date." là:".$revenue;
+        //return $orders;
     }
 
     public function get_order_details($order_id){
