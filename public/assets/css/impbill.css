@@ -1,0 +1,40 @@
+.antialiased {
+    position: relative;
+}
+
+.main-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70px;
+    border: 1px solid #b9b8b8;
+    padding: 50px;
+}
+h3{
+    color: red;
+}
+
+form{
+    margin-top: 30px;
+}
+
+.input {
+    margin-top: 10px;
+}
+
+input {
+    position: absolute;
+    border: 1px solid;
+    height: 20px;
+    right: 15px;
+}
+
+button {
+    position: relative;
+    top: 10px;
+    background-color: rgb(214, 194, 8);
+}
+
+button:hover {
+    background-color: rgb(216, 201, 65);
+}

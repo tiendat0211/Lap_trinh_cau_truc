@@ -1,0 +1,17 @@
+.antialiased {
+    position: relative;
+}
+
+.main-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70px;
+    border: 1px solid #b9b8b8;
+    padding: 50px;
+    width: 500px;
+}
+h2{
+    color: red;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,29 @@
+.antialiased{
+    position: relative;
+}
+
+.main-content{
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3 {
+    color: red;
+    padding: 20px 0;
+}
+
+ul {
+    list-style: none;
+    border-bottom: 1px solid;
+}
+
+ul:last-child{
+    border-bottom: none;
+}
+
+/* ul::after{
+    display: block;
+
+} */
