@@ -11,7 +11,7 @@ Install instruction:
 
 -Step 2: Download file .env "https://drive.google.com/file/d/1CxvFLuhkcg4k9XsAEGodi6GsCexR10Ur/view?usp=sharing"
 
--Step 3: Dowload file demo_ltct.sql "https://drive.google.com/file/d/1D6coWeWPTsJrNbjFGyYSOQ3KmkvqfStI/view?usp=sharing"
+-Step 3: Dowload file demo_ltct.sql "https://drive.google.com/file/d/10G2-qNr7QTrdNfz87ThaYHMNNzI6pDXm/view?usp=sharing"
 
 -Step 4: Create database with xampp
 
