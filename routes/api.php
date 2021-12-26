@@ -32,4 +32,6 @@ Route::get('/get_expbills', 'App\Http\Controllers\KhohangController@get_expbill'
 Route::get('/get_impbills/{date}', 'App\Http\Controllers\KhohangController@get_recvbillbydate');
 Route::get('/get_expbills/{date}', 'App\Http\Controllers\KhohangController@get_expbillbydate');
 
+Route::get('/get_namebyimpbill', 'App\Http\Controllers\KhohangController@get_namebyimpbill');
+
 

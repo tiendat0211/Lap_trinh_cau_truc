@@ -18,9 +18,34 @@ Route::get('/', function () {
 });
 
 
-Route::get('/impbill', 'App\Http\Controllers\ImpbillController@getForm');
+Route::get('/impbill',function(){
+    return view('impbill');
+});
 Route::post('/save_impbill', 'App\Http\Controllers\ImpbillController@savebill');
 
-Route::get('/expbill', 'App\Http\Controllers\ExpbillController@getForm');
+Route::get('/expbill',function(){
+    return view('expbill');
+});
 Route::post('/save_expbill', 'App\Http\Controllers\ExpbillController@savebill');
+
+Route::get('/Thongbao',function(){
+    return view('Thongbao');
+});
+
+Route::get('/Error',function(){
+    return view('Error');
+});
+
+Route::get('/thongke',function(){
+    return view('thongke');
+});
+
+Route::post('/ket_qua', 'App\Http\Controllers\ThongkeController@ketqua');
+
+
+Route::get('/thongkexuatkho',function(){
+    return view('thongkexuatkho');
+});
+
+Route::post('/ket_qua_xuat_kho', 'App\Http\Controllers\ThongkexuatkhoController@ketqua');
 

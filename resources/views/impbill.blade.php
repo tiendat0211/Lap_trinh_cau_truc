@@ -19,6 +19,7 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
     <body class="antialiased">
         <div class="main-content">
@@ -26,19 +27,22 @@
             
             <form method="post" action="{{ url('save_impbill') }}">
                 {{ csrf_field()}}
-                <label for="ID">ID:</label>
-                <input type="text" name="id">
+                <label for="admin_id">ID người nhập:</label>
+                <input type="text" name="admin_id">
                 <br>
-                <label for="product_id">Product_id:</label>
+                <label for="product_id">ID sản phẩm:</label>
                 <input type="text" name="product_id">
                 <br>
-                <label for="quantity">Quantity:</label>
+                <label for="quantity">Số lượng:</label>
                 <input type="text" name="quantity">
                 <br>
-                <label for="color">Color:</label>
+                <label for="color">Màu sắc:</label>
                 <input type="text" name="color">
                 <br>
-                <button type="submit">Kiểm tra</button>
+                <label for="description">Mô tả:</label>
+                <input type="text" name="description">
+                <br>
+                <button type="submit">Nhập kho</button>
             </form>
         </div>
     </body>

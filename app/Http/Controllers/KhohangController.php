@@ -56,25 +56,6 @@ class KhohangController extends Controller
         return "Số lượng đơn hàng:".$sum_order;
     }
 
-    public function get_revenue($product_id){
-        $products=Product::find($product_id);
-        $revenue=0;
-        foreach($products->order_details as $value){
-            $revenue+= $value->payment;
-        }
-        return "Số tiền thu được từ sản phẩm ".$product_id." là:".$revenue." VND";
-    }
-
-    public function get_revenuebydate($date){
-        $orders=Order::whereDate('created_at',$date)->join('order_details','order_details.order_id','=','orders.id')->get();
-        $revenue=0;
-        foreach($orders as $value){
-            $revenue+= $value->payment;
-        }
-        return "Số tiền thu được theo ngày ".$date." là:".$revenue;
-        //return $orders;
-    }
-
     public function get_order_details($order_id){
         $orders= Order::find($order_id);
         return $orders->order_details;
@@ -100,6 +81,11 @@ class KhohangController extends Controller
         return $expbills;
     }
 
-
+    public function get_namebyimpbill(){
+        $impbills= Impbill::all();
+        foreach( $impbills->admins as $value){
+            return $value->admin_name;
+        }
+    }
 
 }
