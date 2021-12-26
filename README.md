@@ -44,7 +44,7 @@ API for impbill:
 
       + Get all import bills: /api/get_impbills
 
-API for impbill:
+API for expbill:
 
       + Get: /expbill
 
