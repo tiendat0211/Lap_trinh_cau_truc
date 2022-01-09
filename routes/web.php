@@ -36,7 +36,7 @@ Route::get('/Error',function(){
     return view('Error');
 });
 
-Route::get('/thongke',function(){
+Route::get('/thongkenhapkho',function(){
     return view('thongke');
 });
 

@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Expbill;
 use App\Models\Product;
 use App\Models\Admin;
+
+/**
+ * @OA\Get(
+ *     path="/projects",
+ *     @OA\Response(response="200", description="Display a listing of projects.")
+ * )
+ */
+
 class ExpbillController extends Controller
 {
 
