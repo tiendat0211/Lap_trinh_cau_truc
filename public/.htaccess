@@ -4,7 +4,6 @@
     </IfModule>
 
     RewriteEngine On
-    RewriteBase /lap_trinh_cau_truc1/public
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
