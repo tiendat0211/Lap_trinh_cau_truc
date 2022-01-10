@@ -31,6 +31,6 @@ class CreateImportbillTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('importbill');
+        Schema::dropIfExists('importbills');
     }
 }
