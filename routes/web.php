@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/impbill',function(){
     return view('impbill');
 });
+
 Route::post('/save_impbill', 'App\Http\Controllers\ImpbillController@savebill');
 
 Route::get('/expbill',function(){
@@ -36,7 +37,7 @@ Route::get('/Error',function(){
     return view('Error');
 });
 
-Route::get('/thongke',function(){
+Route::get('/thongkenhapkho',function(){
     return view('thongke');
 });
 
