@@ -28,7 +28,6 @@ class ImpbillController extends Controller
             $admins = Admin::find($request->admin_id);
             $action = "nhập";
             return view('Thongbao',['new' => $news,'products'=>$products,'admins'=>$admins,'action'=>$action]);
-
         }
        
     }
