@@ -18,8 +18,6 @@ class CreateExportbillTable extends Migration
             $table->unsignedInteger('product_id');
             $table->unsignedInteger('quantity');
             $table->string('color', 2);
-            $table->dateTime('created_at', $precision = 0);
-            $table->dateTime('updated_at', $precision = 0);
             $table->unsignedInteger('admin_id');
             $table->string('description');
             $table->timestamps();
