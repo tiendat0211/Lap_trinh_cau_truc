@@ -45,7 +45,7 @@ Route::post('/ket_qua', 'App\Http\Controllers\ThongkeController@ketqua');
 
 
 Route::get('/thongkexuatkho',function(){
-    return view('thongkexuatkho');
+    return view('thongke_xuatkho');
 });
 
 Route::post('/ket_qua_xuat_kho', 'App\Http\Controllers\ThongkexuatkhoController@ketqua');
