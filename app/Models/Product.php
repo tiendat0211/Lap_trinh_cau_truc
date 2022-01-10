@@ -10,7 +10,19 @@ class Product extends Model
     use HasFactory;
     protected $table = 'products';
     
-    protected $fillable = [
-        'id', 'name','price'
-    ];
+    public function quantity() {
+        return $this->hasMany('App\Models\Quantity','product_id','id');
+    }
+
+    public function order_details() {
+        return $this->hasMany('App\Models\Order_details','product_id','id');
+    }
+
+    public function importbills() {
+        return $this->hasMany('App\Models\Impbill','product_id','id');
+    }
+
+    public function exportbills() {
+        return $this->hasMany('App\Models\Expbill','product_id','id');
+    }
 }
