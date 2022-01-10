@@ -42,7 +42,7 @@
                         <p>Tên người xuất : {{$impbill->admins->admin_name}}</p>
                     </li>
                     <li>
-                        <p>ID phẩm: {{$impbill->products->product_name}}</p>
+                        <p>Tên phẩm: {{$impbill->products->product_name}}</p>
                     </li>
                     <li>
                         <p>Số lượng : {{$impbill->quantity}}</p>
