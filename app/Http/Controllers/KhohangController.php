@@ -71,6 +71,8 @@ class KhohangController extends Controller
         return $impbills;
     }
 
+    
+
     public function get_expbill(){
         $expbills= Expbill::all();
         return $expbills;
