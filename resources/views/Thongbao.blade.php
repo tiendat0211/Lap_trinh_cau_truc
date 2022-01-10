@@ -30,7 +30,7 @@
             <h2>Bạn đã {{$action}} kho thành công.</h2>
             <h3>Chi tiết phiếu : </h3>
             <p>Tên người {{$action}} : {{$admins->admin_name}}</p>
-            <p>Tên sản phẩm : {{$products->product_name}}</p>
+            <p>Tên sản phẩm : {{$products->name}}</p>
             <p>Số lượng : {{$new->quantity}}</p>
             <p>Màu sắc : {{$new->color}}</p>
             <p>Mô tả : {{$new->description}}</p>
