@@ -17,7 +17,7 @@ class ExportbillTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('importbills')->insert([
+        DB::table('exportbills')->insert([
             ['id' => 1,
             'product_id' => 1,
             'quantity' => 10,
