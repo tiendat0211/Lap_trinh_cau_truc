@@ -54,5 +54,10 @@ class KhohangController extends Controller
         return $expbills;
     }
 
+    public function get_impbillbydate($date){
+        $expbills= Expbill::whereDate('created_at',$date)->get();
+        return $expbills;
+    }
+
 
 }
