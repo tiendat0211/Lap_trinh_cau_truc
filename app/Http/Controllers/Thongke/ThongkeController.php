@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Xuatkho;
+namespace App\Http\Controllers\Thongke;
 
 use Illuminate\Http\Request;
 
@@ -12,7 +12,7 @@ use App\Models\Expbill;
 use App\Models\Admin;
 use App\Http\Controllers\Controller;
 
-class ThongkexuatkhoController extends Controller
+class ThongkeController extends Controller
 {
 
     public function ketqua(Request $request){

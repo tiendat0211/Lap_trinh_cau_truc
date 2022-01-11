@@ -48,5 +48,5 @@ Route::get('/thongkexuatkho',function(){
     return view('thongkexuatkho');
 });
 
-Route::post('/ket_qua_xuat_kho', 'App\Http\Controllers\Xuatkho\ThongkexuatkhoController@ketqua');
+Route::post('/ket_qua_xuat_kho', 'App\Http\Controllers\Xuatkho\ThongkeController@ketqua');
 
