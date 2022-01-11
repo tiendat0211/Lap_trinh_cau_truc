@@ -41,12 +41,12 @@ Route::get('/thongkenhapkho',function(){
     return view('thongke');
 });
 
-Route::post('/ket_qua', 'App\Http\Controllers\Nhapkho\ThongkeController@ketqua');
+Route::post('/ket_qua', 'App\Http\Controllers\Thongke\ThongkeController@ketqua');
 
 
 Route::get('/thongkexuatkho',function(){
     return view('thongkexuatkho');
 });
 
-Route::post('/ket_qua_xuat_kho', 'App\Http\Controllers\Xuatkho\ThongkeController@ketqua');
+Route::post('/ket_qua_xuat_kho', 'App\Http\Controllers\Thongke\ThongkeController@ketqua');
 
