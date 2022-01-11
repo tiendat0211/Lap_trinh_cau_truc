@@ -15,9 +15,10 @@ class ImpbillController extends Controller
         // nhan het du lieu co trong form
         //return $request->all();
         $products=Product::find($request->product_id);
+        $admins=Admin::find($request->admin_id);
 
-        if($products == null ){
-            return redirect('Error')->with('error','Không tìm thấy sản phẩm');
+        if($products == null || $admins == null ){
+            return redirect('Error')->with('error','Validate input error');
         }else{
             $news = new Impbill;
             $news->product_id = $request->product_id;

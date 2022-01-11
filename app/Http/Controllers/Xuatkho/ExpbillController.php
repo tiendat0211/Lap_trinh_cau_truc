@@ -23,9 +23,9 @@ class ExpbillController extends Controller
         //return $request->all();
 
         $products=Product::find($request->product_id);
-
-        if($products == Null){
-            return redirect('Error')->with('error','Không tìm thấy sản phẩm này');
+        $admins = Admin::find($request->admin_id);
+        if($products == Null || $admins == Null){
+            return redirect('Error')->with('error','Validate input error');
         }else{
 
             foreach($products->quantity as $value){
