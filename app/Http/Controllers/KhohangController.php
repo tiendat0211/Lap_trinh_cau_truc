@@ -33,31 +33,4 @@ class KhohangController extends Controller
         return "Số lượng sản phẩm ".$product_id. " còn trong kho: ".$quantity;
     }
 
-   
-    public function get_recvbill(){
-        $impbills= Impbill::all();
-        return $impbills;
-    }
-
-    public function get_recvbillbydate($date){
-        $impbills= Impbill::whereDate('created_at',$date)->get();
-        return $impbills;
-    }
-
-    public function get_expbill(){
-        $expbills= Expbill::all();
-        return $expbills;
-    }
-
-    public function get_expbillbydate($date){
-        $expbills= Expbill::whereDate('created_at',$date)->get();
-        return $expbills;
-    }
-
-    public function get_impbillbydate($date){
-        $expbills= Expbill::whereDate('created_at',$date)->get();
-        return $expbills;
-    }
-
-
 }

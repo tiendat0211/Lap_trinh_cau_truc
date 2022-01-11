@@ -27,20 +27,40 @@ class ThongkeNhapkhoController extends Controller
         }
         if($request->check == 1){
             $date = $request->ngay;
-            $impbills=Impbill::whereDate('created_at',$request->ngay)->get();
+            $impbills = get_recvbillbydate($date);
             return view('ketquaxuatkho',['impbills'=>$impbills,'date'=>$date,'admin'=>$admin,'product'=>$product]);
         }
         else if($request->check == 2){
             $product = Product::find($request->product_id);
-            $impbills=Impbill::where('product_id',$request->product_id)->get();
+            $impbills= get_recvbillbyproduct($request->product_id);
             return view('ketquaxuatkho',['impbills'=>$impbills,'date'=>$date,'admin'=>$admin,'product'=>$product]);
         }
         else if($request->check == 3){
             $admin = Admin::find($request->admin_id);
-            $impbills=Impbill::where('admin_id',$request->admin_id)->get();
+            $impbills=get_recvbillbyadmin($request->admin_id);
             return view('ketquaxuatkho',['impbills'=>$impbills,'date'=>$date,'admin'=>$admin,'product'=>$product]);
         }
 
      }
-    
+
+    public function get_recvbill(){
+        $impbills= Impbill::all();
+        return $impbills;
+    }
+
+    public function get_recvbillbydate($date){
+        $impbills= Impbill::whereDate('created_at',$date)->get();
+        return $impbills;
+    }
+
+    public function get_recvbillbyproduct($product_id){
+        $impbills=Impbill::where('product_id',$product_id)->get();
+        return $impbills;
+    }
+
+    public function get_recvbillbyadmin($admin_id){
+        $impbills=Impbill::where('admin_id',$admin_id)->get();
+        return $impbills;
+    }
+
 }
