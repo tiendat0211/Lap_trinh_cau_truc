@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Nhapkho;
 
 use Illuminate\Http\Request;
 
@@ -10,6 +10,7 @@ use App\Models\Order_details;
 use App\Models\Impbill;
 use App\Models\Expbill;
 use App\Models\Admin;
+use App\Http\Controllers\Controller;
 
 class ThongkeController extends Controller
 {

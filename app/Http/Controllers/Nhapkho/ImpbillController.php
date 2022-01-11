@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Nhapkho;
 
 use Illuminate\Http\Request;
 use App\Models\Impbill;
 use App\Models\Product;
 use App\Models\Admin;
+use App\Http\Controllers\Controller;
 
 class ImpbillController extends Controller
 {

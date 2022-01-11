@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Xuatkho;
 
 use Illuminate\Http\Request;
 use App\Models\Expbill;
 use App\Models\Product;
 use App\Models\Admin;
+use App\Http\Controllers\Controller;
 
 /**
  * @OA\Get(
