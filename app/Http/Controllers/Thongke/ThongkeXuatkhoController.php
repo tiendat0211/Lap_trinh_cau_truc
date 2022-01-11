@@ -12,7 +12,7 @@ use App\Models\Expbill;
 use App\Models\Admin;
 use App\Http\Controllers\Controller;
 
-class ThongkeController extends Controller
+class ThongkeXuatkhoController extends Controller
 {
 
     public function ketqua(Request $request){
