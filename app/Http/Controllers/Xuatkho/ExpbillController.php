@@ -28,25 +28,19 @@ class ExpbillController extends Controller
             return redirect('Error')->with('error','Validate input error');
         }else{
 
-            foreach($products->quantity as $value){
-                if($value->color = $request->color){
-                    $quantity = ($value->quantity);
-                }
-            }
-           
-            if($quantity < $request->quantity){
+            if($products->quantity < $request->quantity){
                 return redirect('Error')->with('error','Sản phẩm này không đủ số lượng');
             }else{
                 $news = new Expbill;
                 $news->product_id = $request->product_id;
-                $news->quantity = $request->quantity;
-                $news->color = $request->color;
                 $news->admin_id = $request->admin_id;
+                $news->quantity = $request->quantity;
+                $news->from = $request->from;
+                $news->to = $request->to;
                 $news->description = $request->description;
                 $news->save();
-                $admins = Admin::find($request->admin_id);
                 $action = "xuất";
-                return view('Thongbao',['new' => $news,'products'=>$products,'admins'=>$admins,'action'=>$action]);
+                return view('Thongbao',['new' => $news,'action'=>$action]);
             }
 
         }

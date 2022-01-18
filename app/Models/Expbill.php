@@ -17,4 +17,12 @@ class Expbill extends Model
     public function products() {
         return $this->hasOne('App\Models\Product','id','product_id');
     }
+
+    public function froms() {
+        return $this->hasOne('App\Models\Warehouse','id','from');
+    }
+
+    public function tos() {
+        return $this->hasOne('App\Models\Warehouse','id','to');
+    }
 }

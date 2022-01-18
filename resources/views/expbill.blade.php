@@ -43,11 +43,11 @@
                     <input type="text" name="quantity">
                 </div>
                 <div class="input">
-                    <label for="from">Xuất từ kho(ID kho):</label>
+                    <label for="from">Xuất từ kho:</label>
                     <input type="text" name="from">
                 </div>
                 <div class="input">
-                    <label for="to">Xuất đến kho(ID kho):</label>
+                    <label for="to">Xuất đến kho:</label>
                     <input type="text" name="to">
                 </div>
                 <div class="input">

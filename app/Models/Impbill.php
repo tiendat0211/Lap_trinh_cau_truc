@@ -17,5 +17,9 @@ class Impbill extends Model
     public function products() {
         return $this->hasOne('App\Models\Product','id','product_id');
     }
+
+    public function warehouses() {
+        return $this->hasOne('App\Models\Warehouse','id','warehouse_id');
+    }
     
 }

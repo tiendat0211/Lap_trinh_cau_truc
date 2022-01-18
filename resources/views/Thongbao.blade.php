@@ -29,10 +29,15 @@
         <div class="main-content">
             <h2>Bạn đã {{$action}} kho thành công.</h2>
             <h3>Chi tiết phiếu : </h3>
-            <p>Tên người {{$action}} : {{$admins->admin_name}}</p>
-            <p>Tên sản phẩm : {{$products->name}}</p>
+            <p>Tên người {{$action}} : {{$new->admins->admin_name}}</p>
+            <p>ID sản phẩm : {{$new->products->id}}</p>
             <p>Số lượng : {{$new->quantity}}</p>
-            <p>Màu sắc : {{$new->color}}</p>
+            @if ($action == "nhập")
+            <p>Kho : {{$new->warehouses->warehouse_name}}</p>
+            @else
+            <p>Xuất kho từ : {{$new->froms->warehouse_name}}</p>
+            <p>Đến kho : {{$new->tos->warehouse_name}}</p>
+            @endif
             <p>Mô tả : {{$new->description}}</p>
         </div>
     </body>

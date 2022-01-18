@@ -19,17 +19,14 @@ class ProductTableSeeder extends Seeder
     {
         DB::table('products')->insert([
             ['id' => 1,
-            'name' => 'Ao khoac',
-            'price' => 500000],
+            'warehouse_id' => '1',
+            'quantity' => 100],
+            ['id' => 1,
+            'warehouse_id' => '2',
+            'quantity' => 100],
             ['id' => 2,
-            'name' => 'Ao dai tay',
-            'price' => 200000],
-            ['id' => 3,
-            'name' => 'Quan',
-            'price' => 100000],
-            ['id' => 4,
-            'name' => 'Ao coc tay',
-            'price' => 200000],
+            'warehouse_id' => '1',
+            'quantity' => 100],
         ]);
     }
 }

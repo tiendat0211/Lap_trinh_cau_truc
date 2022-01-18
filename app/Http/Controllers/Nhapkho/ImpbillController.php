@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Impbill;
 use App\Models\Product;
 use App\Models\Admin;
+use App\Models\Warehouse;
 use App\Http\Controllers\Controller;
 
 class ImpbillController extends Controller
@@ -16,20 +17,21 @@ class ImpbillController extends Controller
         //return $request->all();
         $products=Product::find($request->product_id);
         $admins=Admin::find($request->admin_id);
+        $warehouses=Warehouse::find($request->warehouse_id);
 
-        if($products == null || $admins == null ){
+        if($products == null || $admins == null || $warehouses == null){
             return redirect('Error')->with('error','Validate input error');
         }else{
             $news = new Impbill;
             $news->product_id = $request->product_id;
-            $news->quantity = $request->quantity;
-            $news->color = $request->color;
             $news->admin_id = $request->admin_id;
+            $news->quantity = $request->quantity;
+            $news->warehouse_id = $request->warehouse_id;
             $news->description = $request->description;
             $news->save();
             $admins = Admin::find($request->admin_id);
             $action = "nhập";
-            return view('Thongbao',['new' => $news,'products'=>$products,'admins'=>$admins,'action'=>$action]);
+            return view('Thongbao',['new' => $news,'action'=>$action]);
         }
        
     }
