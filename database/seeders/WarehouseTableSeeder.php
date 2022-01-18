@@ -23,6 +23,9 @@ class WarehouseTableSeeder extends Seeder
             ['id' => 2,
             'warehouse_name' => 'Kho Tp Hồ Chí Minh',
             'address' => 'Hồ Chí Minh'],
+            ['id' => 3,
+            'warehouse_name' => 'Kho đặc biệt',
+            'address' => 'Hà Nội'],
         ]);
     }
 }
