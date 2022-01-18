@@ -16,9 +16,9 @@ class CreateImportbillTable extends Migration
         Schema::create('importbills', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('product_id');
-            $table->unsignedInteger('quantity');
-            $table->string('color');
             $table->unsignedInteger('admin_id');
+            $table->unsignedInteger('quantity');
+            $table->unsignedInteger('warehouse_id');
             $table->string('description');
             $table->timestamps();
         });

@@ -19,16 +19,10 @@ class ImportbillTableSeeder extends Seeder
         DB::table('importbills')->insert([
             [
             'product_id' => 1,
+            'admin_id' => 1,
+            'warehouse_id' => 1,
             'quantity' => 10,
-            'color' => 'Den',
-            'description' => 'Nhap kho',
-            'admin_id' => 1],
-            [
-            'product_id' => 2,
-            'quantity' => 10,
-            'color' => 'Den',
-            'description' => 'Nhap kho',
-            'admin_id' => 1]
+            'description' => 'Nhập hàng vào kho Hà Nội'],
         ]);
     }
 }

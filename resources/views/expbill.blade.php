@@ -43,8 +43,12 @@
                     <input type="text" name="quantity">
                 </div>
                 <div class="input">
-                    <label for="color">Màu sắc:</label>
-                    <input type="text" name="color">
+                    <label for="from">Xuất từ kho(ID kho):</label>
+                    <input type="text" name="from">
+                </div>
+                <div class="input">
+                    <label for="to">Xuất đến kho(ID kho):</label>
+                    <input type="text" name="to">
                 </div>
                 <div class="input">
                     <label for="description">Mô tả:</label>

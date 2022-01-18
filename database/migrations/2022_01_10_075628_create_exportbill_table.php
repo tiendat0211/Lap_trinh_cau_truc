@@ -16,9 +16,10 @@ class CreateExportbillTable extends Migration
         Schema::create('exportbills', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('product_id');
-            $table->unsignedInteger('quantity');
-            $table->string('color');
             $table->unsignedInteger('admin_id');
+            $table->unsignedInteger('quantity');
+            $table->unsignedInteger('from');
+            $table->unsignedInteger('to');
             $table->string('description');
             $table->timestamps();
         });

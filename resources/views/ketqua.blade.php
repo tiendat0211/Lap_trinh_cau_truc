@@ -49,7 +49,7 @@
                         <p>Số lượng : {{$impbill->quantity}}</p>
                     </li>
                     <li>
-                        <p>Màu sắc : {{$impbill->color}}</p>
+                        <p>Kho : {{$impbill->warehouse_id}}</p>
                     </li>
                     <li>
                         <p>Mô tả : {{$impbill->description}}</p>

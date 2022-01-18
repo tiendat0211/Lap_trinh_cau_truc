@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-
-class ExportbillTableSeeder extends Seeder
+class WarehouseTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,14 +16,13 @@ class ExportbillTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('exportbills')->insert([
+        DB::table('warehouses')->insert([
             ['id' => 1,
-            'product_id' => 1,
-            'admin_id' => 1,
-            'quantity' => 10,
-            'from' => 1,
-            'to' => 2,
-            'description' => 'Xuất hàng đến kho Tp.HCM'],
+            'warehouse_name' => 'Kho Hà Nội',
+            'address' => 'Hà Nội'],
+            ['id' => 2,
+            'warehouse_name' => 'Kho Tp Hồ Chí Minh',
+            'address' => 'Hồ Chí Minh'],
         ]);
     }
 }
