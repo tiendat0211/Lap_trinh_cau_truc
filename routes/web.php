@@ -50,3 +50,7 @@ Route::get('/thongkexuatkho',function(){
 
 Route::post('/ket_qua_xuat_kho', 'App\Http\Controllers\Thongke\ThongkeXuatkhoController@ketqua');
 
+Route::get('/test',function(){
+    return view('test');
+});
+

@@ -28,12 +28,12 @@
     </head>
     <body class="antialiased">
         <div class="main-content">
-            
+
             @if ($date != null)
                 <h3>Chi tiết nhập kho theo ngày {{$date}}</h3>
             @elseif ($product != null)
                 <h3>Chi tiết nhập kho theo sản phẩm : {{$product->product_name}}</h3>
-            @else 
+            @else
             <h3>Chi tiết nhập kho theo người nhập : {{$admin->admin_name}}</h3>
             @endif
 
@@ -43,13 +43,13 @@
                         <p>Tên người nhập : {{$impbill->admins->admin_name}}</p>
                     </li>
                     <li>
-                        <p>Tên sản phẩm: {{$impbill->products->name}}</p>
+                        <p>ID sản phẩm: {{$impbill->products->id}}</p>
                     </li>
                     <li>
                         <p>Số lượng : {{$impbill->quantity}}</p>
                     </li>
                     <li>
-                        <p>Kho : {{$impbill->warehouse_id}}</p>
+                        <p>Kho : {{$impbill->warehouses->warehouse_name}}</p>
                     </li>
                     <li>
                         <p>Mô tả : {{$impbill->description}}</p>
